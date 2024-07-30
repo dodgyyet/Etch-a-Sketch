@@ -4,12 +4,13 @@
 makeScreen(16);
     
 
-function makeScreen(sideLength) {
+function makeScreen(sidesLength) {
     const container = document.querySelector("#container");
-    totalDivs = sideLength*sideLength
+    totalDivs = sidesLength*sidesLength ;
     for (let i = 1; i<=totalDivs; i++) {
         let squareDiv = document.createElement("div");
         squareDiv.classList.add("square");
+        squareDiv.style.flex = `0 0 ${100/sidesLength}%`
         container.appendChild(squareDiv);
     };
 };

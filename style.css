@@ -14,10 +14,9 @@ body {
     height: 960px;
 }
 
-.square {
-    flex: 0 0 6.25%;
-    background-color: grey;
-}
+/*.square {
+    background-color: grey; 
+} */
 
 .square-color {
     background-color: red;
