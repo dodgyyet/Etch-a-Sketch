@@ -8,15 +8,14 @@ body {
 #container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     justify-self: center;
     border: 3px solid black;
     width: 960px;
+    height: 960px;
 }
 
 .square {
-    height: 60px;
-    width: 60px;
+    flex: 0 0 6.25%;
     background-color: grey;
 }
 
