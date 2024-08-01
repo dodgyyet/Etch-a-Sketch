@@ -17,6 +17,13 @@ body {
 }
 
 
+
+
+square {
+    background-color: rgba("0, 0, 0, 0");
+}
+*/
+
 .square-color {
     background-color: red;
 }

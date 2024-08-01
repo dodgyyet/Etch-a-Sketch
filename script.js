@@ -15,12 +15,23 @@ function makeScreen(sidesLength) {
     };
 };
 
+function getRanRgbVal() {
+    // Cuts off to 60-245 to not have colors that are too bright
+    // or too dark but favors brighter colors
+    return Math.floor(Math.random() * 185) + 60
+}
+
 // Every square hovered over recieves the square-color class giving it a new color
 container.addEventListener("mouseover", (event) => {
     target = event.target
-    if (target.classList.contains("square")) {
-        target.classList.add("square-color")
+    if (!(target.classList.contains("square"))) {
+            return
     }
+    if (target.style.backgroundColor == "") {
+        target.style.backgroundColor = `rgb(${getRanRgbVal()},${getRanRgbVal()},${getRanRgbVal()})`;
+        console.log(target.style.backgroundColor)
+    }
+    
 })  
 
 const btn = document.querySelector("#btn")
