@@ -26,7 +26,7 @@ container.addEventListener("mouseover", (event) => {
 const btn = document.querySelector("#btn")
 btn.addEventListener("click", () => {
     screenSize = prompt("Enter the Number of Squares You Want on Each Side")
-    if (screenSize>100)  {
+    if (!Number.isInteger(parseInt(screenSize)) || screenSize-Math.floor(screenSize) !== 0 || screenSize>100  )  {
         alert("Invalid Response")
     }
     else {
