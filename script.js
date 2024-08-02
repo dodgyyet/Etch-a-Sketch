@@ -43,7 +43,9 @@ const btn = document.querySelector("#btn")
 btn.addEventListener("click", () => {
     screenSize = prompt("Enter the Number of Squares You Want on Each Side")
     //Error Checks
-    if (!Number.isInteger(parseInt(screenSize)) || screenSize - Math.floor(screenSize) !== 0 || screenSize > 100) {
+    if(!(screenSize))
+        return
+    if (!parseInt(screenSize) || screenSize - Math.floor(screenSize) !== 0 || screenSize > 100) {
         alert("Invalid Response")
     }
     else {
